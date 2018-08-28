@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -98,14 +97,12 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public void pre(View view) {
-        Log.d("上一张",""+view);
         loadimaginebypath(Paths.get(count));
         count--;
         if (count<0)
             count=Paths.size()-1;
     }
     public void next(View view) {
-        Log.d("下一张",""+view);
         loadimaginebypath(Paths.get(count));
         count++;
         if (count==Paths.size())
