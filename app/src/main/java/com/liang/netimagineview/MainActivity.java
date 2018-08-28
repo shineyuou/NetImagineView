@@ -12,7 +12,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.github.chrisbanes.photoview.PhotoView;
 
@@ -72,13 +71,11 @@ public class MainActivity extends AppCompatActivity {
                         count++;
                         if (count==Paths.size())
                             count=0;
-                        Toast.makeText(MainActivity.this,"下一张",Toast.LENGTH_SHORT).show();
                     }else if (change<=-400){
                         loadimaginebypath(Paths.get(count));
                         count--;
                         if (count<0)
                             count=Paths.size()-1;
-                        Toast.makeText(MainActivity.this,"上一张",Toast.LENGTH_SHORT).show();
                     }
                     break;
             }
